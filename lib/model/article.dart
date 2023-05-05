@@ -1,15 +1,15 @@
 class Article{
-  final String author;
+  final String? author;
   final String title;
   final String description;
-  final String urltoImage;
+  final String? urltoImage;
   final String publishedAt;
 
   Article({
-   required this.author,
+    this.author,
    required this.title,
    required this.description,
-   required this.urltoImage,
+    this.urltoImage,
    required this.publishedAt
 });
 
@@ -21,6 +21,5 @@ class Article{
         urltoImage: json['urltoImage']==null ? null :json['urltoImage'],
         publishedAt: json['publishedAt']==null ? null :json['publishedAt']
     );
-
   }
 }
