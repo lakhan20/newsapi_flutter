@@ -18,7 +18,7 @@ class Article{
         author: json['author']==null ? null :json['author'],
         title: json['title']==null ? null :json['title'],
         description: json['description']==null ? null :json['description'],
-        urltoImage: json['urltoImage']==null ? null :json['urltoImage'],
+        urltoImage: json['urlToImage']==null ? null :json['urlToImage'],
         publishedAt: json['publishedAt']==null ? null :json['publishedAt']
     );
   }
