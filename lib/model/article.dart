@@ -1,14 +1,14 @@
 class Article{
   final String? author;
   final String title;
-  final String description;
+  final String? description;
   final String? urltoImage;
   final String publishedAt;
 
   Article({
     this.author,
    required this.title,
-   required this.description,
+    this.description,
     this.urltoImage,
    required this.publishedAt
 });

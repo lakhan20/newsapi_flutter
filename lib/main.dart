@@ -38,7 +38,20 @@ class _MyHomePageState extends State<MyHomePage> {
           builder: (BuildContext context, AsyncSnapshot<List<Article>> snapshot){
             if(snapshot.hasData)
               {
-                return Text("Hurrrrrrreee");
+
+                return ListView.builder(
+                    itemCount: snapshot.data!.length,
+                    itemBuilder: (BuildContext context,index)
+                    {
+                      return Card(
+                        elevation: 5,
+                        child: Text('${snapshot.data![index].title}'),
+
+                      );
+                    }
+
+
+                );
               }
             return Center(child: CircularProgressIndicator());
           },
